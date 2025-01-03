@@ -1,0 +1,4 @@
+Internal Server Error: /api/chart-data/
+"GET /api/chart-data/?symbol=ADAUSDT_UNIUSDT&start_date=2024-01-01&end_date=2024-12-26 HTTP/1.1" 500 76
+Internal Server Error: /api/chart-data/
+"GET /api/chart-data/?symbol=ADAUSDT_UNIUSDT&start_date=2024-01-01&end_date=2024-12-26 HTTP/1.1" 500 76
