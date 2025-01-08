@@ -13,8 +13,8 @@ logger = logging.getLogger(__name__)
 # Binance data fetcher
 def fetch_binance_data(symbol, start_date, end_date, interval='4h'):
     # Fetch API credentials from environment variables
-    api_key = os.environ.get('AF5_key')
-    api_secret = os.environ.get('AF5_secret')
+    api_key = os.environ.get('key')
+    api_secret = os.environ.get('secret')
 
     if not api_key or not api_secret:
         raise ValueError("API Key and Secret not found in environment variables.")
@@ -98,7 +98,7 @@ def read_csv_file(request):
             return JsonResponse({'error': 'No data returned from Binance for the specified symbols and date range.'}, status=404)
 
         # Process tradesheet CSV
-        file_path = os.path.join(settings.BASE_DIR, 'EntryExit', 'data', 'reversed_trades.csv')
+        file_path = os.path.join(settings.BASE_DIR, 'EntryExit', 'data', '')
         if not os.path.exists(file_path):
             return JsonResponse({'error': 'Tradesheet CSV file not found'}, status=404)
 
